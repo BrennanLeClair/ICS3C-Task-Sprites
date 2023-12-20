@@ -5,7 +5,9 @@ pygame.init()
 
 # Import functions for drawing gridlines and using sprites
 from pygame_grid import *
-from ucc_sprite import Sprite
+
+# Import our sprites
+from dog import Dog
 
 # Create and open a pygame screen with the given size
 screen = pygame.display.set_mode((960, 540))
@@ -24,10 +26,11 @@ all_sprites = pygame.sprite.Group()
 
 # Load images
 background_image = pygame.image.load("park.png")
-dog_image = pygame.image.load("dog.png")
+
 
 # Create sprites
-
+dog = Dog()
+dog.add(all_sprites)
 
 
 # Main Loop
